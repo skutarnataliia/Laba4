@@ -141,7 +141,12 @@ class Enemy(Character):
         '''
         Function docstring
         '''
-        return item == self.item
+        if item == self.item:
+            print("You fend " + self.name + "Tabitha off with the " + item)
+            return True
+        print(self.name + " crushes you, puny adventurer!")
+        return False
+
 
     def get_defeated(self):
         '''
